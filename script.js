@@ -1,4 +1,5 @@
-var tl = gsap.timeline();
+function loadingAnimation(){
+  var tl = gsap.timeline();
 tl.from(".line h1", {
   y: 100,
   // opacity: 0,
@@ -22,8 +23,8 @@ tl.from("#line1-part1, .line h2", {
 });
 tl.to(".line h2",{
     animationName: "animation",
-    opacity: 1
-})
+    opacity: 1,
+});
 
 tl.to("#loader", {
   opacity: 0,
@@ -35,8 +36,31 @@ tl.from("#page1",{
     y: 1600,
     opacity: 0,
     ease: Power4,
-    duration : 0.5
-})
+    duration : 0.5,
+});
 tl.to("#loader",{
-    diaplay: "none"
+    diaplay: "none",
+    zIndex: -1
+});
+tl.from("#nav",{
+  opacity: 0
 })
+tl.from(".page1-center h1, #third_text h2, #third_text h3",{
+  y: 150,
+  stagger:0.2
+})
+};
+loadingAnimation();
+
+
+function cursorAnimation(){
+  document.addEventListener("mousemove",function(details){
+    gsap.to("#cursor",{
+      left : details.x,
+      top: details.y, 
+    });
+  });
+  Shery.makeMagnet("nav-part2 h1");
+};
+
+cursorAnimation();

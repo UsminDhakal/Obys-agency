@@ -9,6 +9,19 @@ html, body{
     height: 100%;
     width: 100%;
 }
+#cursor{
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #ffffff7d;
+    position:fixed;
+    z-index: 999;
+    mix-blend-mode:difference;
+    transform: translate(-50%, -50%);
+    
+
+}
 #loader{
     height:100%;
     width: 100%;
@@ -21,10 +34,7 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* background-color: red; */
     height: fit-content;
-    /* height: 14vh; */
-    /* height:  */
     overflow: hidden;
     gap: 3vw;
 }
@@ -43,18 +53,18 @@ html, body{
 }
 #line1-part1 h5{
     width: 5vw;
-    /* background-color: red; */
+    
 }
 .line h1{
     font-size: 6vw;
     text-transform: uppercase;
     font-weight: 900;
 }
-.line h2{
+.line h{
     font-size: 4vw;
     text-transform: uppercase;
     font-weight: 900;
-    /* animation-name: animation; */
+    animation-name: animation;
     animation-duration: 1s;
     animation-iteration-count: infinite;
 
@@ -101,4 +111,49 @@ html, body{
     height: 100vh;
     width: 100%;
     background-color: #040404;
+}
+#page1 #nav{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    padding: 4vh 5.5vw;
+}
+#nav-part2{
+    display: flex;
+    gap: 4vw;
+    align-items: center;
+    justify-content: center;
+}
+#nav-part2 h4{
+    font-size: 1vw;
+    font-weight: 500;
+}
+.page1-center{
+
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    overflow: hidden;
+    width: 70%;
+    margin-left: 27%;
+    position: relative;
+    z-index:  999;
+}
+.page1-center:nth-child(2){
+    margin-top: 20vh;
+}
+.page1-center h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+}
+#third_text h2{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+}
+.page1-center h2:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    font-weight: 300;
 }

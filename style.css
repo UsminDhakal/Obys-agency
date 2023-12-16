@@ -10,6 +10,7 @@ html, body{
     width: 100%;
 }
 #cursor{
+    pointer-events: none;
     height: 2.5vw;
     width: 2.5vw;
     border-radius: 50%;
@@ -60,7 +61,7 @@ html, body{
     text-transform: uppercase;
     font-weight: 900;
 }
-.line h{
+.line h2{
     font-size: 4vw;
     text-transform: uppercase;
     font-weight: 900;
@@ -105,12 +106,13 @@ html, body{
 
 #main{
     position: relative;
-    background-color: #030303;
+    background-color: #151515;
 }
 #page1{
     height: 100vh;
     width: 100%;
-    background-color: #040404;
+    background-color: #151515;
+    margin-bottom: 15vh;
 }
 #page1 #nav{
     display: flex;
@@ -128,6 +130,21 @@ html, body{
     font-size: 1vw;
     font-weight: 500;
 }
+#page1-center-div{
+    min-height: 80vh;
+    width:100%;
+    position: relative;
+}
+#page1-center-div::before {
+    content: "01";
+    position: absolute;
+    left: 20%;
+    font-size: 3vw;
+    top:0%;
+    font-family: 'silk serif';
+    color: white;
+
+}
 .page1-center{
 
     display: flex;
@@ -139,7 +156,7 @@ html, body{
     position: relative;
     z-index:  999;
 }
-.page1-center:nth-child(2){
+.page1-center:nth-child(1){
     margin-top: 20vh;
 }
 .page1-center h1{
@@ -147,6 +164,8 @@ html, body{
     text-transform: uppercase;
     line-height: 7vw;
 }
+
+
 #third_text h2{
     font-size: 7vw;
     text-transform: uppercase;
@@ -156,4 +175,249 @@ html, body{
     -webkit-text-stroke: 2px white;
     color: transparent;
     font-weight: 300;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    padding-top: 7vh;
+    position: relative;
+}
+#video-container{
+    height: 66vh;
+    width: 71vw;
+    position: relative;
+    left: 28%;
+    background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+}
+#video-container img{
+    position: absolute;
+    top:0px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video-container video{
+    height: 99%;
+    width: 100%;
+    object-fit: cover;
+
+}
+#video-cursor{
+    background-color:#FFA63D;
+    height:8vw;
+    width:8vw;
+    border-radius: 50%;
+    position: absolute;
+    top:-10%;
+    left: 80%;
+    z-index:10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#video-cursor i{
+    font-size: 2vw;
+}
+#page3{
+    min-height: 100vh;
+    width:100%;
+    background-color: rgb(77, 71, 71);
+    position: relative;
+}
+#page4{
+    min-height: 100vh;
+    width:100%;
+    background-color: #151515;
+    position: relative;
+    padding-top: 7vh;
+}
+
+#page4-content{
+    width: 65vw;
+    min-height: 100vh;
+    margin-left: 28%;
+    
+    /* background-color: red; */
+}
+#page4-content h1{
+    font-size: 6vw;
+    text-transform: uppercase;
+    position: relative;
+}
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    left: -20%;
+    font-size: 3vw;
+    top:5%;
+    font-family: 'silk serif';
+}
+.underline{
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 4vh 0 3vh 0;
+}
+#page4-content > p{
+    width: 50%;
+    font-size: 2vw;
+}
+#page4-flex{
+    margin-top: 9vh;
+    display: flex;
+    gap: 2vw;
+    width: 100%;
+    
+    /* background-color: yellow; */
+    
+}
+#page4-flex img{
+    height: 100vh;
+    width:50%;
+    object-fit: cover;
+}
+#paragraph-flex{
+    width: 50%;
+    /* line-height: 2v; */
+    height: 25%;
+}
+#paragraph-flex p{
+    font-size: 1vw;
+    width: 50%;
+    margin-top: 2vh;
+    /* background-color: red; */
+}
+#page4-blue{
+    min-height:50%;
+    width:50%;
+    background-color: #3F7DF4;
+    padding: 4vh 3vw;
+    position: relative;
+    top: -30vh;
+    left: 30%;
+    
+}
+.blue-div-elem{
+    border-bottom: 2px solid white;
+    margin-bottom: 4vh;
+    padding: 4vh 0;
+    display: flex;
+    gap: 10%;
+}
+.blue-div-elem h4{
+    width: 50%;
+    font-size: 1.5vw;
+    font-weight: 400;
+
+}
+.blue-div-elem p{
+    width: 40%;
+    font-size: 1vw;
+
+}
+#page4-content p:nth-last-child(1){
+    font-size: 1vw;
+}
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 10vh;
+}
+.elem, .elem-right{
+    
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.elem h1{
+    margin-right: 16px;
+    font-size: 7vw;;
+    -webkit-text-stroke: 1px white;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    animation-name: animation-left;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes animation-left {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem-right h1{
+    margin-right: 16px;
+    font-size: 7vw;;
+    -webkit-text-stroke: 1px white;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    animation-name: animation-left;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+#page5 span{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-style: italic;
+    font-family: 'silk serif';
+}
+#footer{
+    padding: 7vh 0;
+    width: 65vw;
+    min-height: 100vh;
+    margin-left: 28%;
+}
+
+#footer h1{
+    display: inline;
+    font-size: 7vw;
+    margin-bottom: 7vh;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative; 
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    left: -20%;
+    font-size: 3vw;
+    top:5%;
+    font-family: 'silk serif';
+}
+#footer svg{ 
+    width:6vw;
+    margin-left: 2vw;  
+}
+#footer-div{
+    padding-top: 7vh;
+    display: flex;
+    height: 50vh;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.box{
+    width:25%;
+}
+.box h6{
+    font-size: 1vw;
+    margin-bottom: 2vh;
+
+}
+.box h5{
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+#footer > h6{
+    margin-top: 1vh;
+    font-size: 1vw;
 }
